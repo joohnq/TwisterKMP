@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TwisterKMP</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="yellow">Yellow</string>
+    <string name="pause">Pause</string>
+    <string name="settings">Settings</string>
+</resources>
