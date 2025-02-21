@@ -1,11 +1,13 @@
-package com.joohnq.twisterkmp
+package com.joohnq.twisterkmp.presentation.component
 
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
+import com.joohnq.twisterkmp.domain.entity.Ball
+import com.joohnq.twisterkmp.domain.mapper.toDegrees
 
-fun DrawScope.drawRoulette(
+fun DrawScope.drawSlice(
     sliceAngle: Float,
     rotation: Float,
     balls: List<Ball>,
@@ -26,14 +28,14 @@ fun DrawScope.drawRoulette(
             topLeft = Offset(canvasCenter.x - radius, canvasCenter.y - radius)
         )
 
-        drawArc(
-            color = Color.White,
-            startAngle = startAngle.toDegrees().toFloat(),
-            sweepAngle = 5f,
-            useCenter = true,
-            size = Size(radius * 2, radius * 2),
-            topLeft = Offset(canvasCenter.x - radius, canvasCenter.y - radius)
-        )
+//        drawArc(
+//            color = Color.White,
+//            startAngle = startAngle.toDegrees().toFloat(),
+//            sweepAngle = 5f,
+//            useCenter = true,
+//            size = Size(radius * 2, radius * 2),
+//            topLeft = Offset(canvasCenter.x - radius, canvasCenter.y - radius)
+//        )
     }
 }
 

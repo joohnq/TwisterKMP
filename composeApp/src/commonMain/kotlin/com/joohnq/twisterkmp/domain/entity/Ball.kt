@@ -1,4 +1,4 @@
-package com.joohnq.twisterkmp
+package com.joohnq.twisterkmp.domain.entity
 
 import androidx.compose.ui.graphics.Color
 import org.jetbrains.compose.resources.StringResource
@@ -11,12 +11,13 @@ import twisterkmp.composeapp.generated.resources.yellow
 sealed class Ball(
     val id: Int,
     val color: Color,
-    val text: StringResource
+    val text: StringResource,
 ) {
-    data object Red : Ball(id = RED_ID, color = Color.Red, text = Res.string.red)
-    data object Blue : Ball(id = BLUE_ID, color=  Color.Blue, text = Res.string.blue)
-    data object Green : Ball(id = GREEN_ID,color=  Color.Green, text = Res.string.green)
-    data object Yellow : Ball(id = YELLOW_ID, color= Color.Yellow, text = Res.string.yellow)
+    data object Red : Ball(id = RED_ID, color = Color.Companion.Red, text = Res.string.red)
+    data object Blue : Ball(id = BLUE_ID, color = Color.Companion.Blue, text = Res.string.blue)
+    data object Green : Ball(id = GREEN_ID, color = Color.Companion.Green, text = Res.string.green)
+    data object Yellow :
+        Ball(id = YELLOW_ID, color = Color.Companion.Yellow, text = Res.string.yellow)
 
     companion object {
         const val RED_ID = 0
